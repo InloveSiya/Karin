@@ -27,6 +27,8 @@ const animationTimeline = () => {
   };
 
   const tl = new TimelineMax();
+  const music = document.getElementById("bgMusic");
+music.play();
 
   tl.to(".container", 0.1, {
     visibility: "visible",
@@ -303,3 +305,7 @@ const resolveFetch = () => {
 };
 
 resolveFetch().then(animationTimeline());
+
+window.addEventListener("click", () => {
+  document.getElementById("bgMusic").play();
+});
